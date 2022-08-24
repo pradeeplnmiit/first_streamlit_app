@@ -12,7 +12,7 @@ def get_fruityvice_data(this_fruit_choice):
 def get_fruit_load_list():
   with my_cnx.cursor() as my_curr:
     my_curr.execute("SELECT * FROM fruit_load_list")
-    return my_cur.fetchall()
+    return my_curr.fetchall()
 
 def insert_row_snowflake(new_fruit):
   with my_cnx.cursor() as my_curr:
