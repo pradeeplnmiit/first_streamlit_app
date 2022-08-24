@@ -11,13 +11,13 @@ def get_fruityvice_data(this_fruit_choice):
 
 def get_fruit_load_list():
   with my_cnx.cursor() as my_curr:
-    my_cur.execute("SELECT * FROM fruit_load_list")
+    my_curr.execute("SELECT * FROM fruit_load_list")
     return my_cur.fetchall()
 
 def insert_row_snowflake(new_fruit):
   with my_cnx.cursor() as my_curr:
     query = "insert into fruit_load_list values("+ new_fruit +")"
-    my_cur.execute(query)
+    my_curr.execute(query)
     return "Thanks for adding" + new_fruit
 
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
